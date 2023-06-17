@@ -1,4 +1,4 @@
-NLP Frontend Boilerplate
+# NLP Frontend Boilerplate
 
 Welcome to the NLP Frontend Boilerplate.
 
