@@ -44,22 +44,44 @@ Make sure you have the following software installed:
 
 - Update the API endpoint configuration in the .env file to point to your NLP API backend.
 
-   ```bash
-    # .env
-    VUE_APP_API_URL=http://localhost:8989/api
-   ```
+  ```bash
+   # .env
+   VUE_APP_API_URL=http://localhost:8989/api
+  ```
 
-### Running the Application
+### Running the Application in development mode (hot-code reloading, error reporting, etc.)
 
 To start the NLP Frontend Boilerplate application, follow these steps:
 
-   ```bash
-    npm run dev
-    # or
-    yarn dev
-   ```
+```bash
+ npm run dev
+ # or
+ yarn dev
+```
 
 This command will build and start the frontend application in development mode. Open your web browser and navigate to http://localhost:8080 to access the application.
+
+- Lint the files
+
+```bash
+yarn lint
+# or
+npm run lint
+```
+
+- Format the files
+
+```bash
+yarn format
+# or
+npm run format
+```
+
+- Build the app for production
+
+```bash
+quasar build
+```
 
 ## Usage
 
