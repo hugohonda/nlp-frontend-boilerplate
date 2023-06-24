@@ -9,7 +9,13 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua.
         </div>
-        <div class="text-caption text-grey description">
+        <div class="text-caption text-grey description ellipsis-3-lines">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
+          ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+          tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
+          sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+          incididunt ut labore et dolore magna aliqua.
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem
           ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -28,7 +34,7 @@
                     <div class="text-caption text-grey status">Text 2</div>
                 </q-card-section> -->
       </q-card-section>
-      <q-card-section horizontal class="q-gutter-sm">
+      <q-card-section horizontal class="q-pt-md q-gutter-sm items-start">
         <q-btn round flat class="text-grey-7" icon="share" />
         <q-btn round flat class="text-grey-7" icon="more_horiz" />
       </q-card-section>

@@ -1,6 +1,18 @@
 <template>
   <q-page>
     <search-bar class="q-pa-none" />
+    <div class="q-gutter-md q-pa-md">
+      <q-btn flat rounded bordered class="text-grey-7" icon="info" label="Link">
+        <a href="#" target="_blank" class="link"></a>
+      </q-btn>
+      <q-btn flat rounded bordered class="text-grey-7" icon="rocket_launch" label="Link">
+        <a href="#" target="_blank" class="link"></a>
+      </q-btn>
+      <q-btn flat rounded bordered class="text-grey-7" icon="build" label="Link">
+        <a href="#" target="_blank" class="link"></a>
+      </q-btn>
+    </div>
+    <q-separator />
     <div class="flex row justify-center scrollable-container">
       <search-result-card
         v-for="result in clinicalResults"
@@ -83,11 +95,7 @@ export default defineComponent({
 
 <style scoped>
 .scrollable-container {
-  height: calc(100vh - 12em); /* Adjust the value based on your requirements */
+  height: calc(100vh - 15em); /* Adjust the value based on your requirements */
   overflow-y: auto;
-}
-
-.bg-primary {
-  background-color: #1a0dab;
 }
 </style>

@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  frontend:
+    image: frontend
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+
+  api:
+    image: api
+    ports:
+      - "8989:8989"
