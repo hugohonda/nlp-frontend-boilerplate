@@ -1,32 +1,17 @@
-# Base image
-FROM node:14 as build
-
-# Set the working directory
+# development
+FROM node:19.4-alpine as develop-stage
 WORKDIR /app
-
-# Copy package.json and package-lock.json to the working directory
-COPY ./nlp-frontend-boilerplate/package*.json ./
-
-# Install dependencies
-RUN npm install
-
-# Copy the rest of the application code
+COPY ./package*.json ./
+RUN yarn global add @quasar/cli
 COPY . .
 
-# Build the Vue.js application
-RUN npm run build
+# build stage
+FROM develop-stage as build-stage
+RUN yarn
+RUN quasar build
 
-# Stage 2: Use nginx for production
-FROM nginx:1.21
-
-# Copy the built application from the previous stage
-COPY --from=build /app/dist /usr/share/nginx/html
-
-# Copy nginx configuration file
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
-# Expose port 80
+# production
+FROM nginx:1.23.3-alpine as production-stage
+COPY --from=build-stage /app/dist/spa /usr/share/nginx/html
 EXPOSE 80
-
-# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
